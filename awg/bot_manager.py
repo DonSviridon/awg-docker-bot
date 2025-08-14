@@ -55,9 +55,9 @@ def escape_markdown_v2(text: str) -> str:
     """
     Экранирует все спецсимволы для Telegram MarkDownV2.
     Список из оф. доки Telegram Bot API:
-    _ * [ ] ( ) ~ ` > # + - = | { } . !
+    _ * [ ] ( ) ~ ` > # + = | { } . !
     """
-    escape_chars = r"_*[]()~`>#+-=|{}.!"
+    escape_chars = r"_*[]()~`>#+=|{}.!"
     return "".join("\\" + c if c in escape_chars else c for c in text)
 
 def update_server_settings(server_id=None):
